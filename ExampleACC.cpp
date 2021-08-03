@@ -285,7 +285,7 @@ void sendDriverCtrl( int & sendSocket, const double & simTime, const unsigned in
     if ( tgtDist < 10.0 )   // minimum  distance to keep
         tgtDist = 10.0;
         
-    accelTgtDist = ( mNearestObject.base.pos.x + tgtDist ) / 10.0;    
+    accelTgtDist = ( mNearestObject.base.pos.x - tgtDist ) / 10.0;    
   }
     
   fprintf( stderr, "sendDriverCtrl: accelDist = %.5lf, accelSpeed = %.5lf\n", accelTgtDist, accelTgtSpeed );
