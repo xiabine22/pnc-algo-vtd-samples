@@ -280,7 +280,7 @@ void sendDriverCtrl( int & sendSocket, const double & simTime, const unsigned in
     else
       accelTgtSpeed = 0.0;
 
-    double tgtDist = ownSpeed ;
+    double tgtDist = ownSpeed * 10;
   
     if ( tgtDist < 10.0 )   // minimum  distance to keep
         tgtDist = 10.0;
